@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+home
+{% endblock  %}
+
+{% block body %}
+<!--引用narbar-->
+
+{% include "Index/navbar.html" %}
+<!--宣傳影片
+<div id="demo" class="container text-center  jumbotron">
+       <iframe width="100%" height="600" src="https://www.youtube.com/embed/L9J6cO9ApNM" frameborder="0" allowfullscreen></iframe>          
+</div>-->
+<!--開發理念＆demo連結-->
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $('#demopage').click(function(){
+                $('#myModal1').modal();
+            });
+        });
+        </script>
+        <div id="demo" class="container text-center  page1 page-background">            
+            <div class="font-inline">
+             <strong id="index_0" class="font-size3 anm-opacity1">seeu</strong>
+             <strong id="index_1" class="font-size3 anm-opacity2">slogan</strong>
+        
+             </div>
+             <br><br>    
+         
+            <p " class="text-left page-width page-center font-size2 " id="index_2">Content1</p><br>
+            <strong><p class="font-size2_5">Generating your own avatar</p></strong>
+            <p " class="text-left page-width page-center font-size2 " id="index_3">Content2</p></strong><br>
+            <strong><p class="font-size2_5">Cloth Simulation</p></strong>
+             <p " class="text-left page-width page-center font-size2 " id="index_6">Content3</p></strong><br>
+
+            <br><br>   
+            <a id="demopage" title="demo"  href="#" class="btn btn-warning btn1 logo-background" ><h4>Let's  try  it</h4></a><br><br>      
+        </div>  
+<!-- 開發團隊介紹-->
+    	<div id="team_introduction" class="container text-center page1" >
+            <br>
+      		<h2 id="index_5">Develops Introduction</h2>      
+            <div class="col-sm-4 text-center font-size1">
+            <img src="{% static "pics/members/rose.png" %}" class="img-circle" alt="Cinque Terre" width="200" height="200"><br><br>
+            <p>Rose</p>
+            <p class="text-left" id="index_7">Rose_Introduction</p></div>
+            <div class="col-sm-4 text-center font-size1"> 
+            <img src="{% static "pics/members/james.png" %}" class="img-circle" alt="Cinque Terre" width="200" height="200"><br><br>
+            <p>James</p>
+            <p class="text-left" id="index_8">James_Introduction</p></div>
+            <div class="col-sm-4 text-center font-size1"> 
+            <img src="{% static "pics/members/viatores.png" %}" class="img-circle" alt="Cinque Terre" width="200" height="200"><br><br>
+            <p>Maybe</p>
+            <p class="text-left" id="index_9">x246855_Introduction</p></div>                                  
+    	</div>
+<!-- contactus-->
+<div id="contactus" class="container text-center page2">
+	<div class="page3 row  ">   
+    <h1 class="font-white" >Contact Us</h1>
+    {% if status %}
+    <h4 class="font-white" >Thanks for your comment</h4>
+    {% else %}
+    <h4 class="font-white" >Any advice and suggestions are welcome</h4>
+
+
+		<form id="contactus" class="form" method="post" action="" onsubmit="return validateContactus()">    
+            <fieldset>
+            <div class="col-md-12">
+                {% csrf_token %}
+
+                <input type="text" id="inputdefault" name="name" class="form-control" placeholder="Name" required maxlength="50"><br>
+                
+                <input type="email" id="inputdefault" name="email" class="form-control" placeholder="E-mail" required maxlength="100"><br>
+                <textarea rows="3"  name="comment" class="form-control" id="comment" placeholder="Comment" required maxlength="200"></textarea><br>
+                <button type="submit" formmethod="post" class="btn btn-warning btn1 logo-background">Submit</button><br><br>
+                </div>
+            </fieldset>
+        </form>
+    {% endif %}
+	</div>
+</div>    
+
+
+
+<!--footer-->
+<nav class="navbar navbar-inverse logo-background text-center">
+<br>
+   <img src="{% static "pics/logo/SeeU(white).png" %}" alt="seeu_logo" height="25px" width="55px">
+        <h5 class="font-white">Copyright © 2017  SeeU  保留一切權利。</h5>
+
+</nav>
+
+<!-- Demo-modal -->  
+<div  class="modal fade " id="myModal1" role="dialog" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+         
+        <button class="close" type="button" data-dismiss="modal">×</button>
+        <h3 class="modal-title"></h3>
+        </div>
+    <div class="modal-body">
+        
+        <div class="madal-page">
+            <div class="col-md-6">
+
+            <IFRAME id="myframe" width=100% height=600 name="demo" marginwidth=0 marginheight=0 src="" ></IFRAME></div>
+
+            <div class="col-md-6">           
+            <div class="page-model">
+            <strong><p class="font-size2">Motion List</p></strong><br>
+            <a class="hovereffect col-md-3" href="#" title="stand" onclick="modelchange(0);return false; " >
+            <img src="{% static "pics/icon/standing.png" %}"   width="50" height="50" >
+            </a>
+            <a class="hovereffect col-md-3" href="#" title="wave"  onclick="modelchange(1);return false;" >
+            <img src="{% static "pics/icon/armsraised.png" %}" width="50" height="50" >
+            </a>
+            <a class="hovereffect col-md-3" href="#" title="squat" onclick="modelchange(2);return false; " >
+            <img src="{% static "pics/icon/squat.png" %}"      width="50" height="50" >
+            </a>
+            <a class="hovereffect col-md-3" href="#" title="jump"  onclick="modelchange(3);return false; ">
+            <img src="{% static "pics/icon/jumping.png" %}"    width="50" height="50" >
+            </a>
+            </div>  
+            <br><br><br><br>
+            <p class="font-size2" id="index_4">How to use</p>
+              
+            </div>
+            <br>
+            
+        </div>
+    </div>
+    <div class="modal-footer ">
+        <button class="btn btn-default " data-dismiss="modal">Close</button>
+    </div>
+    </div>
+  </div>
+</div>
+<script >
+//初始化
+updatelanguage(1)
+modelchange(0)
+</script>
+
+{% endblock  %}

@@ -1,0 +1,218 @@
+    body{
+        padding-top: 50px;
+        background-color: #F0F0F0;
+    }
+    a{
+        text-decoration:none;
+    }
+/*navbar*/
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-image: none;
+      border-top: 1px solid #1F1F1F;
+      border-bottom: 1px solid #1F1F1F;
+     
+    }
+    .navbar-brand{
+        padding-top:10px;
+    }
+    .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #ff5656;
+    }
+    .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: #ff5656;
+    }
+
+
+/*版面*/
+    .page-model{
+        text-align: left;
+        padding: 0px;
+        margin: 0px auto;
+        border:0px;
+        width: 100%;
+    }
+    .jumbotron{
+    padding: 0px;
+    margin: 0;
+    border: 0;
+    width:100%;
+    height:700px;
+    }
+    .page-width{
+        width:70%;
+    }
+    .page-center{
+        margin: 0px auto; 
+        padding: 0px;
+    }
+
+    .page1{ 
+    padding-top: 50px;
+    width:100%;
+    height:100%;
+    min-height: 700px;
+
+    }
+
+    .page2{ 
+    padding: 50px;
+    width:100%;
+    height:580px;
+    background-color: #000000;
+    }
+
+    .page3{ 
+    margin:0px auto;
+    width:70%;
+    }
+
+    .contactus-page{
+        font-size: 150%;
+        max-height:600px;
+        overflow-y: hidden;
+    }
+    .madal-page{
+        height:630px; 
+        overflow:scroll;
+    }
+/*調整modal*/
+    .modal-dialog {
+        width:80%;
+        margin: 0px auto;
+        border: 0px;
+    }
+    .modal-content{
+        background-color: #DDDDDD;
+    }
+/*字體*/
+    /*顏色*/
+    .font-inline{
+        display:inline;
+    }
+    .font-white
+    {
+        color: white;
+    }
+    /*大小*/
+    .font-size1
+    {
+        font-size: 16px;   
+    }
+    .font-size2
+    {
+        font-size: 20px;   
+    }
+    .font-size2_5
+    {
+        font-size: 25px;   
+    }
+    .font-size3
+    {
+        font-size: 65px;   
+    }
+    /**/
+/*btn*/
+    .btn1{
+        border-color: black;
+        font-color:white;
+    }
+    
+/*animation*/
+    .anm-opacity1{
+    opacity: 1;
+    -webkit-animation-name: opacity1; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    }
+    .anm-opacity2{
+    opacity: 1;
+    -webkit-animation-name: opacity2; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+    }
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes opacity1 {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+    }
+
+    /* Standard syntax */
+    @keyframes opacity1 {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+    }
+    @-webkit-keyframes opacity2 {
+    0%   {opacity: 0;}
+    40%   {opacity: 0;}
+    100% {opacity: 1;}
+    }
+
+    /* Standard syntax */
+    @keyframes opacity2{
+    0%   {opacity: 0;}
+    40%   {opacity: 0;}
+    100% {opacity: 1;}
+    }
+/*effect*/
+    .hovereffect{
+        opacity: 1;
+    }
+    .hovereffect:hover{
+        opacity: 0.5;
+    }
+/*login*/
+
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}

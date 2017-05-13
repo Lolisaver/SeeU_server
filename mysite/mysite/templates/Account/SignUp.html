@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+{{status}}
+<form action="/test/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" formmethod="post"  value="Submit">
+</form>
+
+
+</body>
+</html>
